@@ -233,3 +233,30 @@ footer {
     .footer-compliance { text-align: center; }
     .hero h1 { font-size: 2rem; }
 }
+/* --- Mobile Responsive Navigation Fix --- */
+@media (max-width: 768px) {
+    /* Wraps the navigation links and spaces them cleanly on mobile phone screens */
+    .nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px 15px;
+        padding: 10px 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    /* Shrinks the menu text slightly so it sits comfortably on one or two clean rows */
+    .nav-links li a {
+        font-size: 0.9rem !important;
+        padding: 5px 8px;
+        white-space: nowrap;
+    }
+
+    /* Centers your logo and title header cleanly above the links */
+    header, nav {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
