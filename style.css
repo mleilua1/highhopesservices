@@ -70,7 +70,7 @@ body {
 
 /* Impactful Hero Area */
 .hero {
-    background: linear-gradient(rgba(0, 75, 135, 0.88), rgba(0, 40, 80, 0.95)), url('HHS Logo.jpg') no-repeat center/contain;
+    background: linear-gradient(rgba(0, 75, 135, 0.88), rgba(0, 40, 80, 0.95)), url('HHS Logo.png') no-repeat center/contain;
     color: var(--white);
     padding: 100px 10%;
     text-align: center;
