@@ -1,0 +1,235 @@
+/* Color Palette & Base System Rules */
+:root {
+    --primary-blue: #004B87;    /* Matches the dominant circular ring in the logo */
+    --accent-blue: #40B4E5;     /* Matches the lighter figure symbol */
+    --dark-text: #223344;
+    --light-bg: #F4F7FA;
+    --white: #FFFFFF;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    color: var(--dark-text);
+    background-color: var(--white);
+    line-height: 1.6;
+}
+
+/* Navbar Construction */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background-color: var(--white);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.nav-logo {
+    height: 50px;
+    width: 50px;
+    object-fit: contain;
+}
+
+.brand-name {
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: var(--primary-blue);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--dark-text);
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover {
+    color: var(--primary-blue);
+}
+
+/* Impactful Hero Area */
+.hero {
+    background: linear-gradient(rgba(0, 75, 135, 0.88), rgba(0, 40, 80, 0.95)), url('HHS Logo.jpg') no-repeat center/contain;
+    color: var(--white);
+    padding: 100px 10%;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    letter-spacing: 0.5px;
+}
+
+.hero-mission {
+    max-width: 800px;
+    margin: 0 auto 30px auto;
+    font-size: 1.2rem;
+    font-weight: 300;
+    line-height: 1.8;
+}
+
+.cta-btn {
+    display: inline-block;
+    padding: 13px 32px;
+    background-color: var(--accent-blue);
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-size: 0.95rem;
+    transition: background-color 0.2s;
+}
+
+.cta-btn:hover {
+    background-color: #2ea3d4;
+}
+
+/* Layout Elements */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.site-section {
+    padding: 60px 0;
+}
+
+.site-section h2 {
+    color: var(--primary-blue);
+    margin-bottom: 35px;
+    font-size: 2rem;
+    position: relative;
+}
+
+.grid-two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: #E2E8F0;
+}
+
+/* Services Display Layout */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.service-card {
+    background-color: var(--light-bg);
+    padding: 30px;
+    border-radius: 6px;
+    border-top: 4px solid var(--primary-blue);
+}
+
+.service-card h4 {
+    color: var(--primary-blue);
+    margin-bottom: 12px;
+    font-size: 1.2rem;
+}
+
+.highlight-box {
+    background-color: #EBF8FF;
+    border-left: 4px solid var(--accent-blue);
+    padding: 25px;
+    border-radius: 0 6px 6px 0;
+}
+
+.highlight-box h3 {
+    color: var(--primary-blue);
+    margin-bottom: 10px;
+}
+
+/* Structured Fees Table Layout */
+.fees-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 12px;
+}
+
+.fees-table th, .fees-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #E2E8F0;
+}
+
+.fees-table th {
+    background-color: var(--primary-blue);
+    color: var(--white);
+}
+
+.table-note {
+    font-size: 0.85rem;
+    color: #667788;
+    font-style: italic;
+}
+
+/* Clean Professional Footer */
+footer {
+    background-color: #1A2633;
+    color: #A0AEC0;
+    padding: 50px 5%;
+    margin-top: 60px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.footer-info h4 {
+    color: var(--white);
+    margin-bottom: 12px;
+}
+
+.footer-compliance {
+    text-align: right;
+    font-size: 0.9rem;
+}
+
+.copyright {
+    margin-top: 15px;
+    font-size: 0.8rem;
+}
+
+/* Responsive Rules for Small Devices */
+@media (max-width: 768px) {
+    .navbar { flex-direction: column; gap: 15px; }
+    .grid-two-col { grid-template-columns: 1fr; }
+    .footer-content { flex-direction: column; text-align: center; }
+    .footer-compliance { text-align: center; }
+    .hero h1 { font-size: 2rem; }
+}
